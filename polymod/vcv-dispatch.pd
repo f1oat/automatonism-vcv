@@ -1,0 +1,33 @@
+#N canvas 258 202 1055 687 10;
+#X obj 59 108 * 256;
+#X obj 79 140 +;
+#X obj 61 72 unpack f f f;
+#X obj 87 166 pack f f;
+#X obj 205 246 mod 256;
+#X obj 87 298 pack f f f f;
+#X obj 149 258 div 256;
+#X obj 61 40 inlet;
+#X obj 85 385 outlet;
+#X obj 87 202 poly \$1 0;
+#X text 73 431 Output: #channel #module #port #state;
+#X text 279 37 Dispatch a connection/disconnection message among \$1
+connectors. Input: #module #port #state #state: 0 for disconnect \,
+1 for connect;
+#X obj 175 42 inlet;
+#X text 173 24 CLEAR;
+#X text 71 18 MSG;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 2 1 1 1;
+#X connect 2 2 3 1;
+#X connect 3 0 9 0;
+#X connect 4 0 5 3;
+#X connect 5 0 8 0;
+#X connect 6 0 5 2;
+#X connect 7 0 2 0;
+#X connect 9 0 5 0;
+#X connect 9 1 4 0;
+#X connect 9 1 6 0;
+#X connect 9 2 5 1;
+#X connect 12 0 9 0;

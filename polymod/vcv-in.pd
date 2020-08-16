@@ -1,0 +1,4 @@
+#N canvas 606 138 450 300 12;
+#X obj 53 66 outlet OUT;
+#X obj 53 35 r cv-ctrl-\$1-\$2;
+#X connect 1 0 0 0;

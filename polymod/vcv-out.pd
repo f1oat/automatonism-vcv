@@ -1,0 +1,4 @@
+#N canvas 1005 273 450 300 12;
+#X obj 72 45 inlet IN;
+#X obj 72 73 s cv-ctrl-\$1-\$2;
+#X connect 0 0 1 0;
