@@ -1,4 +1,4 @@
-#N canvas 536 220 778 708 12;
+#N canvas 740 275 778 708 12;
 #X msg 70 150 bang;
 #X obj 70 217 t b b b;
 #X obj 168 234 f;
@@ -20,7 +20,6 @@
 #X obj 314 382 f;
 #X obj 314 344 loadbang;
 #X obj 168 365 t f f;
-#X obj 70 628 s pd-basic-osc.pd;
 #X text 78 19 automatonism-open pid module_name;
 #X obj 183 104 r \$1-reset!;
 #X obj 70 63 r \$1-create-\$2!;
@@ -29,10 +28,11 @@
 #X obj 382 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 91 304 symbol \$2;
+#X obj 70 628 s pd-\$2.pd;
 #X connect 0 0 1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 13 0;
-#X connect 1 1 27 0;
+#X connect 1 1 26 0;
 #X connect 1 2 2 0;
 #X connect 2 0 3 0;
 #X connect 2 0 4 0;
@@ -47,14 +47,14 @@
 #X connect 12 0 19 0;
 #X connect 13 0 16 0;
 #X connect 13 1 15 0;
-#X connect 14 0 20 0;
+#X connect 14 0 27 0;
 #X connect 16 0 14 0;
 #X connect 17 0 2 1;
 #X connect 18 0 17 0;
 #X connect 19 0 9 1;
 #X connect 19 1 17 1;
-#X connect 22 0 10 0;
-#X connect 23 0 0 0;
-#X connect 24 0 25 0;
-#X connect 26 0 25 0;
-#X connect 27 0 9 0;
+#X connect 21 0 10 0;
+#X connect 22 0 0 0;
+#X connect 23 0 24 0;
+#X connect 25 0 24 0;
+#X connect 26 0 9 0;
