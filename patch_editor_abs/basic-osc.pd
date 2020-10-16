@@ -1,4 +1,4 @@
-#N canvas 105 137 1068 703 10;
+#N canvas 153 323 1422 703 10;
 #X obj 93 296 t f f;
 #X obj 93 384 line~;
 #X obj 93 478 mtof~;
@@ -9,9 +9,9 @@
 #X obj 480 416 pack 0 50;
 #X obj 480 438 line~;
 #X obj 107 177 hsl 128 15 0 127 0 1 \$0-basic-osc-fm-att-s \$0-basic-osc-fm-att-r
-FM 133 7 0 10 -158136 -1 -1 1200 1;
+FM 133 7 0 10 -158136 -1 -1 10840 1;
 #X obj 107 132 hsl 128 15 0 127 0 1 \$0-basic-osc-pitch-s \$0-basic-osc-pitch-r
-PITCH 133 7 0 10 -262144 -1 -1 7400 1;
+PITCH 133 7 0 10 -262144 -1 -1 10827 1;
 #X obj 192 109 cnv 5 5 5 empty empty PWM 0 0 0 8 -262144 -120682 0
 ;
 #X text 474 229 FM IN;
@@ -25,9 +25,9 @@ PITCH 133 7 0 10 -262144 -1 -1 7400 1;
 -66577 0;
 #X obj 93 269 r \$0-basic-osc-pitch-s;
 #X obj 107 147 hsl 128 15 0 127 0 1 \$0-basic-osc-pwidth-s \$0-basic-osc-pwidth-r
-P-WIDTH 133 7 0 10 -262144 -1 -1 10500 1;
+P-WIDTH 133 7 0 10 -262144 -1 -1 57 1;
 #X obj 107 162 hsl 128 15 0 127 0 1 \$0-basic-osc-pwm-att-s \$0-basic-osc-pwm-att-r
-PWM 133 7 0 10 -158136 -1 -1 11400 1;
+PWM 133 7 0 10 -158136 -1 -1 10827 1;
 #X obj 480 350 r \$0-basic-osc-fm-att-s;
 #X obj 480 372 * 0.00787402;
 #X obj 480 394 * 2;
@@ -64,7 +64,7 @@ PWM 133 7 0 10 -158136 -1 -1 11400 1;
 #X obj 679 498 t b b;
 #X obj 177 192 hradio 15 1 1 4 \$0-basic-osc-wform-s \$0-basic-osc-wform-r
 empty 65 7 0 10 -262144 -1 -1 0;
-#X obj 175 124 cnv 5 5 5 empty \$0-instance-num 2 0 0 0 12 -262144
+#X obj 175 124 cnv 5 5 5 empty \$0-instance-num 4 0 0 0 12 -262144
 -66577 0;
 #X obj 938 588 s \$0-waveform-gui-r;
 #X obj 938 541 makefilename %s;
@@ -821,6 +821,15 @@ empty 65 7 0 10 -262144 -1 -1 0;
 #X obj 352 591 vcv-out~ \$1 0;
 #X obj 217 433 *~ 12;
 #X text 264 432 CV 1V/octave;
+#X obj 1159 95 vcv-in \$1 0;
+#X obj 1159 161 vcv-in \$1 1;
+#X obj 1157 223 vcv-in \$1 2;
+#X text 1159 65 Polymod knobs;
+#X obj 1155 283 vcv-in \$1 3;
+#X obj 1159 129 s \$0-basic-osc-pitch-r;
+#X obj 1157 257 s \$0-basic-osc-pwm-att-r;
+#X obj 1155 309 s \$0-basic-osc-fm-att-r;
+#X obj 1159 193 s \$0-basic-osc-pwidth-r;
 #X connect 0 0 79 0;
 #X connect 0 1 89 0;
 #X connect 0 1 3 0;
@@ -900,4 +909,8 @@ empty 65 7 0 10 -262144 -1 -1 0;
 #X connect 92 0 6 0;
 #X connect 93 0 4 0;
 #X connect 94 0 5 1;
+#X connect 96 0 101 0;
+#X connect 97 0 104 0;
+#X connect 98 0 102 0;
+#X connect 100 0 103 0;
 #X coords 0 -1 1 1 200 112 2 100 100;
